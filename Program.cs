@@ -1,63 +1,31 @@
-﻿using System;
-
-namespace Course
-
+﻿namespace PracticeExercises
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //    Pessoa x, y;
-            //    x = new Pessoa();
-            //    y = new Pessoa();
+            Carro primeiroCarro = new Carro();
+            Console.WriteLine("Insira os dados do carro abaixo:");
+            Console.WriteLine("Nome do carro:");
+            primeiroCarro.nomeCarro = Console.ReadLine();
 
-            //    Console.WriteLine("Nome e idade da primeira pessoa:");
-            //    x.nome = Console.ReadLine();
-            //    x.idade = int.Parse(Console.ReadLine());
+            Console.WriteLine("Marca do carro:");
+            primeiroCarro.marcaCarro = Console.ReadLine();
 
-            //    Console.WriteLine("Nome e idade da segunda pessoa:");
-            //    y.nome = Console.ReadLine();
-            //    y.idade = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ano do carro:");
+            primeiroCarro.anoCarro = int.Parse(Console.ReadLine());
 
-            //    if (x.idade > y.idade)
-            //    {
-            //        Console.WriteLine($"{x.nome} é a pessoa mais velha.");
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine($"{y.nome} é a pessoa mais velha.");
-            //    }
+            Console.WriteLine($"{primeiroCarro.nomeCarro}, {primeiroCarro.marcaCarro}, {primeiroCarro.anoCarro}");
 
 
-
-            Colaborador x, y;
-            x = new Colaborador();
-            y = new Colaborador();
-
-            Console.WriteLine("Digite o nome e salário do funcionário:");
-            x.nomeColaborador = Console.ReadLine();
-            x.salario = double.Parse(Console.ReadLine());
-
-            Console.WriteLine("Digite o nome e salário do funcionário:");
-            y.nomeColaborador = Console.ReadLine();
-            y.salario = double.Parse(Console.ReadLine());
-
-            double salarioMedio = (x.salario + y.salario) / 2;  
-            Console.WriteLine($"O salário médio é {salarioMedio}");
         }
 
     }
-    class Colaborador
+
+    class Carro
     {
-        public string nomeColaborador;
-        public double salario;
-    }
-
-
-    class Pessoa
-    {
-        public string nome;
-        public int idade;
-
+        public string nomeCarro;
+        public string marcaCarro;
+        public int anoCarro; 
     }
 }
