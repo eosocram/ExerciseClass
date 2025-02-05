@@ -1,4 +1,4 @@
-# Resoluções Exercícios com classes. :) 
+# Solving exercises with classes :) 
 
 This repository is for my evolution in solving problems with classes
 
