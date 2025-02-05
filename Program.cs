@@ -1,31 +1,29 @@
-﻿namespace PracticeExercises
+﻿using System;
+
+namespace PracticeClass
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Carro primeiroCarro = new Carro();
-            Console.WriteLine("Insira os dados do carro abaixo:");
-            Console.WriteLine("Nome do carro:");
-            primeiroCarro.nomeCarro = Console.ReadLine();
+            ModelCar carro = new ModelCar();
+
+            Console.WriteLine("Digite os dados do carro:");
+
+            Console.WriteLine("Modelo do Carro:");
+            carro.nomeCarro = Console.ReadLine();
 
             Console.WriteLine("Marca do carro:");
-            primeiroCarro.marcaCarro = Console.ReadLine();
+            carro.marcaCarro = Console.ReadLine();
 
             Console.WriteLine("Ano do carro:");
-            primeiroCarro.anoCarro = int.Parse(Console.ReadLine());
-
-            Console.WriteLine($"{primeiroCarro.nomeCarro}, {primeiroCarro.marcaCarro}, {primeiroCarro.anoCarro}");
+            carro.anoCarro = int.Parse(Console.ReadLine());
 
 
+            carro.ShowMeDetails();
         }
 
     }
-
-    class Carro
-    {
-        public string nomeCarro;
-        public string marcaCarro;
-        public int anoCarro; 
-    }
 }
+
+
