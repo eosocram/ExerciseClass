@@ -1,9 +1,19 @@
 ﻿namespace PracticeClass
 {
-    public class BankAccount
+
+    public class BankAccountModel
     {
+        private static readonly Random random = new Random();
+
+
         public int numConta { get; set; }
-        public decimal saldo = 2500;
+        public decimal saldo  { get; private set; }
+
+        public BankAccountModel()
+        {
+            saldo = random.Next(-250, 250);
+        }
+
 
         public void ExibirDetalhes()
         {
@@ -11,15 +21,19 @@
             Console.WriteLine($"Saldo disponível: {saldo}");
         }
 
-        public void Deposit()
+        public void Deposit(decimal saldoAtualizado)
         {
-            Console.WriteLine("Adicione saldo para sua conta:");
-            decimal depositAccount = decimal.Parse(Console.ReadLine());
-
-            decimal valorFinal = saldo + depositAccount;
-            Console.WriteLine($"O saldo disponível atualizado é de: R${valorFinal}");
+            if (saldo < 0 && saldoAtualizado > 0)
+            {
+                saldo += saldoAtualizado;
+                Console.WriteLine($"Débito automático da conta - MOTIVO: uso do crédito especial. Saldo atual R${saldo}");
+            }
+            else if (saldo > 0 &&  saldoAtualizado > 0)
+            {
+                saldo += saldoAtualizado;
+                Console.WriteLine($"Saldo atualizado R${saldo}");
+            }
         }
     }
-
-    
 }
+
