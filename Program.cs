@@ -43,32 +43,5 @@ namespace PracticeClass
     }
 }
 
-    //IBankAccount pgPix = new PagamentoPix();
-    //IBankAccount pgBoleto = new PagamentoBoleto();
-
-    //Console.WriteLine("Digite o número da conta:");
-    //pgPix.numConta = int.Parse(Console.ReadLine());
-
-    //pgPix.ExibirSaldoCompleto();
-
-    //IBankAccount pagamento;
-    //Console.WriteLine("Escolha um método de pagamento: 1 - PIX | 2 - BOLETO (PRAZO 48H)");
-    //int opcao = int.Parse(Console.ReadLine());
-    //switch (opcao) 
-    //{
-    //    case 1:
-    //        Console.WriteLine("1");
-    //        break;
-    //    case 2:
-    //        Console.WriteLine("2");
-    //        break;
-    //};
-
-
-    //decimal pagamento = decimal.Parse(Console.ReadLine());
-
-
-    //pgPix.ProcessarPagamento(pagamento);
-    //pgPix.ExibirSaldo();
 
 
