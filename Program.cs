@@ -6,19 +6,18 @@ namespace PracticeClass
     {
         static void Main(string[] args)
         {
+            BankAccount conta = new DepositoPix();
+
+            Console.WriteLine("Digite o número da conta:");
+            conta.numConta = int.Parse(Console.ReadLine());
+            conta.ExibirSaldoCompleto();
+
+            Console.WriteLine("Insira o valor:");
+            decimal pagamentoPix = decimal.Parse(Console.ReadLine());
 
 
-            //Cachorro cachorro = new Cachorro();
-            //Console.WriteLine("Nome do cachorro:");
-            //cachorro.Name = Console.ReadLine();
-            //cachorro.EmitirSom();
-            Gato gato = new Gato();
-            Console.WriteLine("Digite o nome do gato:");
-            gato.Name = Console.ReadLine();
-            gato.EmitirSom();
-
-
-            
+            conta.ProcessarDeposito(pagamentoPix);
+            conta.ExibirSaldo();
 
         }
 

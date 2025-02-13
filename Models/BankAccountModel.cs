@@ -1,39 +1,48 @@
 ﻿namespace PracticeClass
 {
-
-    public class BankAccountModel
+    
+    public class DepositoPix : BankAccount
     {
+        
         private static readonly Random random = new Random();
 
-
         public int numConta { get; set; }
-        public decimal saldo  { get; private set; }
+        public decimal saldo { get;  private set; }
 
-        public BankAccountModel()
+        public DepositoPix()
         {
             saldo = random.Next(-250, 250);
         }
 
-
-        public void ExibirDetalhes()
+        public void ExibirSaldo()
         {
-            Console.WriteLine($"Número conta: {numConta}");
-            Console.WriteLine($"Saldo disponível: {saldo}");
+            Console.WriteLine($"Saldo atual: {saldo}");
+        }
+        public void ExibirSaldoCompleto()
+        {
+             Console.WriteLine($"Número da conta: {numConta}");
+             Console.WriteLine($"Saldo atual: {saldo}");
         }
 
-        public void Deposit(decimal saldoAtualizado)
+        public void ProcessarDeposito(decimal valor)
         {
-            if (saldo < 0 && saldoAtualizado > 0)
-            {
-                saldo += saldoAtualizado;
-                Console.WriteLine($"Débito automático da conta - MOTIVO: uso do crédito especial. Saldo atual R${saldo}");
-            }
-            else if (saldo > 0 &&  saldoAtualizado > 0)
-            {
-                saldo += saldoAtualizado;
-                Console.WriteLine($"Saldo atualizado R${saldo}");
-            }
+             
+            saldo += valor;
+            Console.WriteLine($"O depósito no valor de {valor:C} foi realizado via PIX");
         }
     }
+
+    public interface BankAccount
+    {
+        public int numConta { get; set; }
+        public decimal saldo { get; }
+        void ProcessarDeposito(decimal valor);
+        void ExibirSaldoCompleto();
+        void ExibirSaldo();
+
+
+
+    }
+
 }
 
