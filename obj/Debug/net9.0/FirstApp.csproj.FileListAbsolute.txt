@@ -2,6 +2,7 @@ C:\Dev\FirstApp\obj\Debug\net9.0\FirstApp.GeneratedMSBuildEditorConfig.editorcon
 C:\Dev\FirstApp\obj\Debug\net9.0\FirstApp.AssemblyInfoInputs.cache
 C:\Dev\FirstApp\obj\Debug\net9.0\FirstApp.AssemblyInfo.cs
 C:\Dev\FirstApp\obj\Debug\net9.0\FirstApp.csproj.CoreCompileInputs.cache
+C:\Dev\FirstApp\obj\Debug\net9.0\FirstApp.sourcelink.json
 C:\Dev\FirstApp\bin\Debug\net9.0\FirstApp.exe
 C:\Dev\FirstApp\bin\Debug\net9.0\FirstApp.deps.json
 C:\Dev\FirstApp\bin\Debug\net9.0\FirstApp.runtimeconfig.json
@@ -12,4 +13,3 @@ C:\Dev\FirstApp\obj\Debug\net9.0\refint\FirstApp.dll
 C:\Dev\FirstApp\obj\Debug\net9.0\FirstApp.pdb
 C:\Dev\FirstApp\obj\Debug\net9.0\FirstApp.genruntimeconfig.cache
 C:\Dev\FirstApp\obj\Debug\net9.0\ref\FirstApp.dll
-C:\Dev\FirstApp\obj\Debug\net9.0\FirstApp.sourcelink.json
