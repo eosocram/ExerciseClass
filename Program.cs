@@ -6,6 +6,11 @@ namespace PracticeClass
     {
         static void Main(string[] args)
         {
+           
+
+        }
+        private static void AppBank()
+        {
 
             Console.WriteLine("Digite o número da conta:");
             int numConta = int.Parse(Console.ReadLine());
@@ -38,7 +43,6 @@ namespace PracticeClass
 
             pagamento.ProcessarPagamento(valor);
             pagamento.ExibirSaldo();
-
         }
     }
 }
